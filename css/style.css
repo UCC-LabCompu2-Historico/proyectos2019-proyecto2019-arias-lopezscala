@@ -1,0 +1,107 @@
+html{
+  font-size: 62.5%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: black;
+}
+h3{
+  display: flex;
+  justify-content: center;
+  color: black;
+  background: red;
+  margin: 2rem 0.5rem 2rem 0.5rem;
+}
+p{
+  background-color: beige;
+
+}
+/*--aca empiezan las clases--*/
+/*menup, game y second son las clases con los distintos formatos*/
+.menup{
+  background-image: url(../cosas/imagenes/index.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.second{
+  background-image: url(../cosas/imagenes/secondary.png);
+  background-position: center;
+  background-size:cover;
+}
+.game{
+  background-image: url(../cosas/imagenes/camino.jpg);
+  background-position: center;
+  background-size:cover;
+}
+
+/*barra con botones en serie*/
+.barra{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  margin: .5rem;
+}
+.barra a{
+  color: white;
+  text-decoration:none;
+  margin-right: 2rem;
+}
+.barra a:last-of-type{
+  margin: 0;
+}
+.barra a:hover{
+  color: red;
+}
+
+/*pone modulos seguidos*/
+.aladear{
+  display: flex;
+  justify-content:space-around;
+}
+
+/*la letra (link) cambia cuando le pasan el mouse*/
+.colorc{
+  display: flex;
+  justify-content: center;
+}
+.colorc a{
+  color: white;
+  text-decoration:none;
+}
+.colorc a:hover{
+  color: red;
+}
+
+/*letra blanca*/
+.title{
+  color: white;
+}
+
+/*coloca objetos seguidos de su titulo y opuestos*/
+.seguidillo{
+  display: flex;
+  justify-content:space-between;
+  background-color: red;
+  margin: .5rem;
+}
+
+/*rotar imagenes*/
+.rotar90{
+       transform: rotate(90deg);
+}
+
+/*fondo beige*/
+.beige{
+  background-color: beige;
+  margin: .5rem;
+}
