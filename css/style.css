@@ -5,61 +5,74 @@ body{
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
   text-transform: uppercase;
 }
-h1{
-  display: flex;
-  justify-content: center;
-  color: white;
-  background: black;
-}
 h3{
-  display: flex;
-  justify-content: center;
+  display: inline-block;
   color: black;
   background: red;
-  margin: 2rem 0.5rem 2rem 0.5rem;
+  padding:1rem 2rem;
+  margin:auto 1rem;
 }
-p{
-  background-color: beige;
-
+header{
+  justify-content: center;
+  color: white;
+  background-color: black;
+  padding-top: .5rem;
+  margin-bottom: 2rem;
+}
+input{
+  margin: 3rem auto;
+  background: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+}
+input:hover{
+  color: red;
 }
 /*--aca empiezan las clases--*/
 /*menup, game y second son las clases con los distintos formatos*/
 .menup{
-  background-image: url(../cosas/imagenes/index.jpg);
+  background-image: url(../imagenes/index.jpg);
   background-position: center;
   background-size: cover;
 }
 .second{
-  background-image: url(../cosas/imagenes/secondary.png);
+  background-image: url(../imagenes/secondary.jpg);
   background-position: center;
   background-size:cover;
 }
 .game{
-  background-image: url(../cosas/imagenes/camino.jpg);
+  background-image: url(../imagenes/camino.jpg);
   background-position: center;
   background-size:cover;
 }
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto;
+}
 
 /*barra con botones en serie*/
-.barra{
+#barra{
   display: flex;
   justify-content: center;
   background-color: black;
-  margin: .5rem;
 }
-.barra a{
+#barra a{
   color: white;
   text-decoration:none;
   margin-right: 2rem;
 }
-.barra a:last-of-type{
+#barra a:last-of-type{
   margin: 0;
 }
-.barra a:hover{
+#barra a:hover{
   color: red;
 }
 
@@ -67,19 +80,6 @@ p{
 .aladear{
   display: flex;
   justify-content:space-around;
-}
-
-/*la letra (link) cambia cuando le pasan el mouse*/
-.colorc{
-  display: flex;
-  justify-content: center;
-}
-.colorc a{
-  color: white;
-  text-decoration:none;
-}
-.colorc a:hover{
-  color: red;
 }
 
 /*letra blanca*/
@@ -91,17 +91,47 @@ p{
 .seguidillo{
   display: flex;
   justify-content:space-between;
-  background-color: red;
   margin: .5rem;
 }
-
-/*rotar imagenes*/
-.rotar90{
-       transform: rotate(90deg);
-}
-
 /*fondo beige*/
 .beige{
   background-color: beige;
-  margin: .5rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+select{
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  width: 100%;
+  color: #333333;
+  text-transform:uppercase;
+}
+.boton{
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: red;
+  text-decoration: none;
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 15rem;
+  border-style: inset;
+  border-width: .3rem;
+  border-color: #333333;
+}
+.boton:hover{
+  background-color: darkred;
+  color: #333333;
+  border-style: outset;
+  border-color: #333333;
+}
+.margen-costados{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
