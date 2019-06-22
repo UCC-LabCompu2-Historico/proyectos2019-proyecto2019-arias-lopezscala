@@ -12,7 +12,7 @@ body{
 h3{
   display: inline-block;
   color: black;
-  background: red;
+  background: slategrey;
   padding:1rem 2rem;
   margin:auto 1rem;
 }
@@ -48,11 +48,6 @@ input:hover{
   background-position: center;
   background-size:cover;
 }
-.game{
-  background-image: url(../imagenes/camino.jpg);
-  background-position: center;
-  background-size:cover;
-}
 .contenedor{
   max-width: 120rem;
   margin: 0 auto;
@@ -63,6 +58,7 @@ input:hover{
   display: flex;
   justify-content: center;
   background-color: black;
+  margin-top: 2rem;
 }
 #barra a{
   color: white;
@@ -80,6 +76,15 @@ input:hover{
 .aladear{
   display: flex;
   justify-content:space-around;
+}
+.block{
+  display: flex;
+  justify-content:space-around;
+}
+@media(max-width: 1000px){
+  .block{
+    flex-direction: column;
+  }
 }
 
 /*letra blanca*/
@@ -134,4 +139,14 @@ select{
 .margen-costados{
   margin-left: 1rem;
   margin-right: 1rem;
+}
+@media (max-width: 1000px) {
+  .margen-costados{
+    margin-left: 0;
+  }
+}
+#canvas{
+  background-color: beige;
+  width: calc(100% - 3rem);
+  height: calc(50% - 3rem);
 }
