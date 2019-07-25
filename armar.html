@@ -10,7 +10,7 @@
   </head>
   <body class="second">
     <header>
-      <h1>armá tu auto</h1>
+      <h1>selecciona tus caracteristicas y simula</h1>
     </header>
     <form action="carreras.html">
       <div class="aladear title">
@@ -19,45 +19,45 @@
             <h2>auto 1</h2>
           </legend>
           <div class="seguidillo">
-            <select name="carroceria1" required>
+            <select id="carroceria1" >
               <option value="" disabled selected>--carroceria--</option>
-              <option value="1000">
+              <option value="1000" id="f11">
                 <h3>formula 1</h3>
               </option>
-              <option value="1200">
+              <option value="1200" id="bugatti1">
                 <h3>bugatti</h3>
               </option>
-              <option value="1400">
+              <option value="1400" id="porsche1">
                 <h3>porsche</h3>
               </option>
-              <option value="1600">
+              <option value="1600" id="masseratti1">
                 <h3>masseratti</h3>
               </option>
-              <option value="1800">
+              <option value="1800" id="rally1">
                 <h3>rally car</h3>
               </option>
-              <option value="2000">
+              <option value="2000" id="cabriolet1">
                 <h3>cabriolet</h3>
               </option>
-              <option value="2200">
+              <option value="2200" id="muscle1">
                 <h3>muscle</h3>
               </option>
-              <option value="2400">
+              <option value="2400" id="pontiac1">
                 <h3>pontiac</h3>
               </option>
-              <option value="2600">
+              <option value="2600" id="x31">
                 <h3>bmw x3</h3>
               </option>
-              <option value="2800">
+              <option value="2800" id="hummer1">
                 <h3>hummer</h3>
               </option>
-              <option value="3000">
+              <option value="3000" id="flete1">
                 <h3>flete</h3>
               </option>
             </select>
           </div>
           <div class="seguidillo">
-            <select name="motor1" required>
+            <select id="motor1">
               <option value="" disabled selected>--motor--</option>
               <option value="300">
                 <h3>300hp</h3>
@@ -95,7 +95,7 @@
             </select>
           </div>
           <div class="seguidillo">
-            <select name="transmision1" required>
+            <select id="transmision1" onchange="calcula1()" >
               <option value="" disabled selected>--transmision--</option>
               <option value="1">
                 <h3>100%</h3>
@@ -134,57 +134,56 @@
           </div>
         </fieldset>
 
-        <script type="text/javascript">
-          var c1 = document.auto1.carroceria1[document.auto1.carroceria1.selectedarmar].value;
-          var m1=document.auto1.carroceria1[document.auto1.motor1.selectedarmar].value;
-          var t1= document.auto1.carroceria1[document.auto1.transmision1.selectedarmar].value;
-          var a1=(9.8*((m1*7)/c1*0.8))*t1;
+        <script>
+
+
         </script>
 
-        <fieldset name="auto2"><!--auto 2-->
+
+        <fieldset id="auto2"><!--auto 2-->
           <legend>
             <h2>auto 2</h2>
           </legend>
           <div class="seguidillo">
-            <select name="carroceria2" required>
+            <select id="carroceria2">
               <option value="" disabled selected>--carroceria--</option>
-              <option value="1000">
+              <option value="1000" id="f12">
                 <h3>formula 1</h3>
               </option>
-              <option value="1200">
+              <option value="1200" id="bugatti2">
                 <h3>bugatti</h3>
               </option>
-              <option value="1400">
+              <option value="1400" id="porsche2">
                 <h3>porsche</h3>
               </option>
-              <option value="1600">
+              <option value="1600" id="masseratti2">
                 <h3>masseratti</h3>
               </option>
-              <option value="1800">
+              <option value="1800" id="rally2">
                 <h3>rally car</h3>
               </option>
-              <option value="2000">
+              <option value="2000" id="cabrio2">
                 <h3>cabriolet</h3>
               </option>
-              <option value="2200">
+              <option value="2200" id="muscle2">
                 <h3>muscle</h3>
               </option>
-              <option value="2400">
+              <option value="2400" id="pontiac2">
                 <h3>pontiac</h3>
               </option>
-              <option value="2600">
+              <option value="2600" id="x32">
                 <h3>bmw x3</h3>
               </option>
-              <option value="2800">
+              <option value="2800" id="hummer2">
                 <h3>hummer</h3>
               </option>
-              <option value="3000">
+              <option value="3000" id="flete2">
                 <h3>flete</h3>
               </option>
             </select>
           </div>
           <div class="seguidillo">
-            <select name="motor2" required>
+            <select id="motor2" >
               <option value="" disabled selected>--motor--</option>
               <option value="300">
                 <h3>300hp</h3>
@@ -221,8 +220,9 @@
               </option>
             </select>
           </div>
-          <div class="seguidillo">
-            <select name="transmision2" required>
+            <div>
+            <div class="seguidillo">
+            <select id="transmision2"  onchange="calcula2()" >
               <option value="" disabled selected>--transmision--</option>
               <option value="1">
                 <h3>100%</h3>
@@ -261,21 +261,37 @@
           </div>
         </fieldset>
 
-        <script type="text/javascript">
-          var c2 = document.auto2.carroceria2[document.auto2.carroceria2.selectedarmar].value;
-          var m2=document.auto2.carroceria2[document.auto2.motor2.selectedarmar].value;
-          var t2= document.auto2.carroceria2[document.auto2.transmision2.selectedarmar].value;
-          var a2=(9.8*((m2*7)/c2*0.8))*t2;
-          /*hasta aca llegamos por ahora ya que no supimos como mover 'a1' ni 'a2' ni las imagenes que corresponden a cada carroceria hacia carreras.html*/
-        </script>
 
       </div>
-      <input type="submit" value="¡¡¡iniciar!!!">
+
     </form>
+
+      <title>simulador</title>
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
+    </head>
+    <script type="text/javascript" src="functions.js"></script>
+    <body class="second">
+    <header>
+
+    </header>
+    <section class="contenedor">
+      <canvas id="canvas" width="1000" height="500">
+
+      </canvas>
+    </section>
     <footer id="barra">
       <a href="index.html">
         <h4>inicio</h4>
       </a>
+      <a href="informacion.html">
+        <h4>¿por que?</h4>
+      </a>
+      <a href="armar.html">
+        <h4>jugar de nuevo</h4>
+      </a>
+
     </footer>
-  </body>
-</html>
+    </body>
+    </html>
+
