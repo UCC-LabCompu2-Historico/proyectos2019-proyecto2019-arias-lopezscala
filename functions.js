@@ -1,7 +1,7 @@
 /* LOPEZ SCALA Facundo, ARIAS Lucas - Laboratorio de computacion 2 */
 
 //declaro variables
-var posX1=5, posX2=5, ctx, auto1, auto2;
+var posX1=5, posX2=5, ctx, auto1, auto2, precioC1, precioM1, precioT1, precio1, precioC2, precioM2, precioT2, precio2;
 let a1, a2, vf1, vf2, t1, t2;
 
 //Se declaran las imagenes del fondo a utilizar
@@ -13,8 +13,8 @@ pasto3 = new Image;
 pasto3.src = "imagenes/pasto.jpg";
 
 /**
- * Funcion que calcula los valores de aceleracion, tiempo y velocidad final del auto 1. Tambien selecciona
- * que el auto mostrado en pantalla coincide con la carroceria elegida
+ * Funcion que calcula los valores de aceleracion, tiempo, precio y velocidad final del auto 1. Tambien selecciona
+ * que el auto mostrado en pantalla coincide con la carroceria elegida. Alerta cuando superamos el precio limite.
  * @function calcula1
  * @param
  * @return
@@ -23,10 +23,17 @@ pasto3.src = "imagenes/pasto.jpg";
     var carroc1 = document.getElementById("carroceria1").value;
     var motor1 = document.getElementById("motor1").value;
     var transmision1 = document.getElementById("transmision1").value;
+    precioC1=10000000/carroc1;
+    precioM1=motor1/0.03;
+    precioT1=   transmision1 * 10000;
+    precio1= precioC1+precioM1+precioT1;
+    if(precio1>18000){
+        alert( "Recuerde que el valor total del auto no puede superar los $18000, seleccione componentes mas baratos");
+    }
     a1=(9.8*((motor1*7)/carroc1*0.8))*transmision1;
     t1= Math.sqrt((2*400)/a1);
     vf1=a1*t1;
-    alert( "La aceleracion del auto 1 es: "+a1+ "[m/s], llega a la meta a "+vf1+"[m/s] y tarda"+t1+"segundos.");
+    alert( "La aceleracion del auto 1 es: "+a1+ "[m/s], llega a la meta a "+vf1+"[m/s] y tarda "+t1+" segundos. El precio del auto es de: $"+precio1);
         if(carroc1==1000){
         auto1 = new Image;
         auto1.src = "imagenes/formula_1.png";
@@ -75,8 +82,8 @@ pasto3.src = "imagenes/pasto.jpg";
     }
 
 /**
- * Funcion que calcula los valores de aceleracion, tiempo y velocidad final del auto 2. Tambien selecciona
- * que el auto mostrado en pantalla coincide con la carroceria elegida
+ * Funcion que calcula los valores de aceleracion, tiempo, precio y velocidad final del auto 2. Tambien selecciona
+ * que el auto mostrado en pantalla coincide con la carroceria elegida. Alerta cuando superamos el precio limite
  * @function calcula2
  * @param
  * @return
@@ -88,7 +95,14 @@ pasto3.src = "imagenes/pasto.jpg";
     a2=(9.8*((motor2*7)/carroc2*0.8))*transmision2;
     t2= Math.sqrt((2*400)/a2);
     vf2=a2*t2;
-    alert( "La aceleracion del auto 2 es: "+a2+ "[m/s], llega a la meta a "+vf2+"[m/s] y tarda"+t2+"segundos.");
+    precioC2=10000000/carroc2;
+    precioM2=motor2/0.03;
+    precioT2=   transmision2 * 10000;
+    precio2= precioC2+precioM2+precioT2;
+    if(precio2>18000){
+        alert( "Recuerde que el valor total del auto no puede superar los $18000, seleccione componentes mas baratos");
+    }
+    alert( "La aceleracion del auto 2 es: "+a2+ "[m/s], llega a la meta a "+vf2+"[m/s] y tarda "+t2+" segundos. El precio del auto es de: $"+precio2);
 
     if(carroc2==1000){
         auto2 = new Image;
