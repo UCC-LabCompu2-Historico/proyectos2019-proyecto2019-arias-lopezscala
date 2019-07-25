@@ -1,3 +1,8 @@
-# proyectos2019-proyecto2019-arias-lopezscala
-proyectos2019-proyecto2019-arias-lopezscala created by GitHub Classroom
-SITIO WEB PARA SIMULAR CARRERAS ELIGIENDO LOS ATRIBUTOS DE TU AUTO (POTENCIA, PESO Y CALIDAD DE TRANMISION)
+# SIMULADOR DE CARRERAS 
+El siguiente sitio web fue disenado para simular carreras. En el menu principal se recomienda seleccionar la opcion "de que se trata" para comprender el funcionamiento del juego. Una vez seleccionado el boton "jugar" se prodecera a elegir los componentes de los autos y a simular carreras con tus amigos.
+Tecnologias utilizadas:
+CSS
+HTML5
+JavaScript
+
+cualquier duda no dudes en escribirnos a: facundolopezscala@gmail.com
