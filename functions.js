@@ -34,7 +34,7 @@ pasto3.src = "imagenes/pasto.jpg";
         a1 = (9.8 * ((motor1 * 7) / carroc1 * 0.8)) * transmision1;
         t1 = Math.sqrt((2 * 400) / a1);
         vf1 = a1 * t1;
-        alert("La aceleracion del auto 1 es: " + a1.toFixed(2) + "[m/s], llega a la meta a " + vf1.toFixed(2) + "[m/s] y tarda " + t1.toFixed(2) + " segundos. El precio del auto es de: $" + precio1.toFixed());
+        alert("La aceleracion del auto 1 es: " + a1.toFixed(2) + "[m/s^2], llega a la meta a " + vf1.toFixed(2) + "[m/s] y tarda " + t1.toFixed(2) + " segundos. El precio del auto es de: $" + precio1.toFixed());
         }
         if(carroc1==1000){
         auto1 = new Image;
@@ -94,9 +94,6 @@ pasto3.src = "imagenes/pasto.jpg";
     var carroc2 = document.getElementById("carroceria2").value;
     var motor2 = document.getElementById("motor2").value;
     var transmision2 = document.getElementById("transmision2").value;
-    a2=(9.8*((motor2*7)/carroc2*0.8))*transmision2;
-    t2= Math.sqrt((2*400)/a2);
-    vf2=a2*t2;
     precioC2=10000000/carroc2;
     precioM2=motor2/0.03;
     precioT2=   transmision2 * 10000;
@@ -105,7 +102,10 @@ pasto3.src = "imagenes/pasto.jpg";
         alert( "Recuerde que el valor total del auto no puede superar los $18000, seleccione componentes mas baratos");
     }
     else{
-        alert( "La aceleracion del auto 2 es: "+a2.toFixed(2)+ "[m/s], llega a la meta a "+vf2.toFixed(2)+"[m/s] y tarda "+t2.toFixed(2)+" segundos. El precio del auto es de: $"+precio2.toFixed());
+        a2=(9.8*((motor2*7)/carroc2*0.8))*transmision2;
+        t2= Math.sqrt((2*400)/a2);
+        vf2=a2*t2;
+        alert( "La aceleracion del auto 2 es: "+a2.toFixed(2)+ "[m/s^2], llega a la meta a "+vf2.toFixed(2)+"[m/s] y tarda "+t2.toFixed(2)+" segundos. El precio del auto es de: $"+precio2.toFixed());
     }
 
     if(carroc2==1000){
