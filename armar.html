@@ -12,13 +12,13 @@
     <header>
       <h1>selecciona tus caracteristicas y simula</h1>
     </header>
-    <form action="carreras.html">
       <div class="aladear title">
         <fieldset name="auto1"><!--auto 1-->
           <legend>
             <h2>auto 1</h2>
           </legend>
           <div class="seguidillo">
+            <label for="carroceria1"></label>
             <select id="carroceria1" >
               <option value="" disabled selected>--carroceria--</option>
               <option value="1000" id="f11">
@@ -57,6 +57,7 @@
             </select>
           </div>
           <div class="seguidillo">
+            <label for="motor1"></label>
             <select id="motor1">
               <option value="" disabled selected>--motor--</option>
               <option value="300">
@@ -95,6 +96,7 @@
             </select>
           </div>
           <div class="seguidillo">
+            <label for="transmision1"></label>
             <select id="transmision1" onchange="calcula1()" >
               <option value="" disabled selected>--transmision--</option>
               <option value="1">
@@ -145,6 +147,7 @@
             <h2>auto 2</h2>
           </legend>
           <div class="seguidillo">
+            <label for="carroceria2"></label>
             <select id="carroceria2">
               <option value="" disabled selected>--carroceria--</option>
               <option value="1000" id="f12">
@@ -183,6 +186,7 @@
             </select>
           </div>
           <div class="seguidillo">
+            <label for="motor2"></label>
             <select id="motor2" >
               <option value="" disabled selected>--motor--</option>
               <option value="300">
@@ -222,7 +226,7 @@
           </div>
             <div>
             <div class="seguidillo">
-            <select id="transmision2"  onchange="calcula2()" >
+              <label for="transmision2"></label><select id="transmision2" onchange="calcula2()" >
               <option value="" disabled selected>--transmision--</option>
               <option value="1">
                 <h3>100%($10000)</h3>
@@ -264,12 +268,10 @@
 
       </div>
 
-    </form>
-
-      <title>simulador</title>
+    <title>simulador</title>
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/style.css">
-    </head>
+
     <script type="text/javascript" src="functions.js"></script>
     <body class="second">
     <header>
@@ -293,5 +295,5 @@
 
     </footer>
     </body>
-    </html>
+
 

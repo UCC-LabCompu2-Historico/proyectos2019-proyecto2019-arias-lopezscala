@@ -197,7 +197,7 @@ pasto3.src = "imagenes/pasto.jpg";
  */
     function dibujaauto1() {
             ctx.drawImage(auto1, posX1, 125, 160, 60);
-            if (posX1 > 800)
+            if (posX1 >= 800)
                 posX1 = 800;
             else
                 posX1 += 3;
@@ -211,7 +211,7 @@ pasto3.src = "imagenes/pasto.jpg";
  */
     function dibujaauto2(){
             ctx.drawImage(auto2, posX2, 300, 160, 60);
-            if (posX2 > 800)
+            if (posX2 >= 800)
                 posX2 = 800;
             else
                 posX2 += 2;
@@ -225,7 +225,7 @@ pasto3.src = "imagenes/pasto.jpg";
  */
     function dibujaauto1a() {
         ctx.drawImage(auto1, posX1, 125, 160, 60);
-        if (posX1 > 800)
+        if (posX1 >= 800)
             posX1 = 800;
         else
             posX1 += 2;
@@ -239,7 +239,7 @@ pasto3.src = "imagenes/pasto.jpg";
  */
     function dibujaauto2a(){
         ctx.drawImage(auto2, posX2, 300, 160, 60);
-        if (posX2 > 800)
+        if (posX2 >= 800)
             posX2 = 800;
         else
             posX2 += 3;
