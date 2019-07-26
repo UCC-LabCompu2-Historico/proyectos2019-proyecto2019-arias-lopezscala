@@ -1,16 +1,25 @@
 /* LOPEZ SCALA Facundo, ARIAS Lucas - Laboratorio de computacion 2 */
 
 //declaro variables
-var posX1=5, posX2=5, ctx, auto1, auto2, precioC1, precioM1, precioT1, precio1, precioC2, precioM2, precioT2, precio2;
+var posX1=45, posX2=45, ctx, auto1, auto2, precioC1, precioM1, precioT1, precio1, precioC2, precioM2, precioT2, precio2;
 let a1, a2, vf1, vf2, t1, t2;
 
 //Se declaran las imagenes del fondo a utilizar
 pasto1 = new Image;
 pasto1.src = "imagenes/pasto.jpg";
-pasto2 = new Image;
-pasto2.src = "imagenes/pasto.jpg";
+meta = new Image;
+meta.src = "imagenes/meta.jpg";
 pasto3 = new Image;
 pasto3.src = "imagenes/pasto.jpg";
+centro = new Image;
+centro.src = "imagenes/centro.jpg";
+lineainf = new Image;
+lineainf.src = "imagenes/lineainf.jpg";
+lineasup = new Image;
+lineasup.src = "imagenes/lineasup.jpg";
+marco = new Image;
+marco.src = "imagenes/marcoo.png";
+
 
 /**
  * Funcion que calcula los valores de aceleracion, tiempo, precio y velocidad final del auto 1. Tambien selecciona
@@ -196,9 +205,9 @@ pasto3.src = "imagenes/pasto.jpg";
  * @return
  */
     function dibujaauto1() {
-            ctx.drawImage(auto1, posX1, 125, 160, 60);
-            if (posX1 >= 800)
-                posX1 = 800;
+            ctx.drawImage(auto1, posX1, 150, 160, 60);
+            if (posX1 >= 750)
+                posX1 = 750;
             else
                 posX1 += 3;
      }
@@ -210,9 +219,9 @@ pasto3.src = "imagenes/pasto.jpg";
  * @return
  */
     function dibujaauto2(){
-            ctx.drawImage(auto2, posX2, 300, 160, 60);
-            if (posX2 >= 800)
-                posX2 = 800;
+            ctx.drawImage(auto2, posX2, 275, 160, 60);
+            if (posX2 >= 750)
+                posX2 = 750;
             else
                 posX2 += 2;
      }
@@ -224,9 +233,9 @@ pasto3.src = "imagenes/pasto.jpg";
  * @return
  */
     function dibujaauto1a() {
-        ctx.drawImage(auto1, posX1, 125, 160, 60);
-        if (posX1 >= 800)
-            posX1 = 800;
+        ctx.drawImage(auto1, posX1, 150, 160, 60);
+        if (posX1 >= 750)
+            posX1 = 750;
         else
             posX1 += 2;
         }
@@ -238,9 +247,9 @@ pasto3.src = "imagenes/pasto.jpg";
  * @return
  */
     function dibujaauto2a(){
-        ctx.drawImage(auto2, posX2, 300, 160, 60);
-        if (posX2 >= 800)
-            posX2 = 800;
+        ctx.drawImage(auto2, posX2, 275, 160, 60);
+        if (posX2 >= 750)
+            posX2 = 750;
         else
             posX2 += 3;
         }
@@ -252,9 +261,13 @@ pasto3.src = "imagenes/pasto.jpg";
  * @return
  */
     function dibujafondo(){
-        ctx.drawImage(pasto1, 0, 0, 1000, 105);
-        ctx.drawImage(pasto2, 0, 205, 1000, 75);
-        ctx.drawImage(pasto3, 0, 380, 1000, 150);
+        ctx.drawImage(pasto1, 5, 5, 1000, 110);
+        ctx.drawImage(meta, 910, 115, 60, 255);
+        ctx.drawImage(centro, 5, 225, 995, 30);
+        ctx.drawImage(pasto3, 5, 370, 998, 100);
+        ctx.drawImage(lineasup, 0, 100, 995, 15);
+        ctx.drawImage(lineainf, 0, 370, 995, 15);
+        ctx.drawImage(marco, 0, 0, 1000, 500);
         }
 
 
