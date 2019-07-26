@@ -146,7 +146,9 @@ select{
   }
 }
 #canvas{
-  background-color: beige;
+  background-color: darkslategray;
   width: calc(100% - 3rem);
   height: calc(50% - 3rem);
 }
+
+
