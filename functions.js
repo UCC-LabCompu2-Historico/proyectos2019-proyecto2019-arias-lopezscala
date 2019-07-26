@@ -2,7 +2,7 @@
 
 //declaro variables
 var posX1=45, posX2=45, ctx, auto1, auto2, precioC1, precioM1, precioT1, precio1, precioC2, precioM2, precioT2, precio2;
-let a1, a2, vf1, vf2, t1, t2;
+let a1, a2, vf1, vf2, t1, t2, velf1, velf2;
 
 //Se declaran las imagenes del fondo a utilizar
 pasto1 = new Image;
@@ -43,7 +43,8 @@ marco.src = "imagenes/marcoo.png";
         a1 = (9.8 * ((motor1 * 7) / carroc1 * 0.8)) * transmision1;
         t1 = Math.sqrt((2 * 400) / a1);
         vf1 = a1 * t1;
-        alert("La aceleracion del auto 1 es: " + a1.toFixed(2) + "[m/s^2], llega a la meta a " + vf1.toFixed(2) + "[m/s] y tarda " + t1.toFixed(2) + " segundos. El precio del auto es de: $" + precio1.toFixed());
+        velf1=vf1*3.6;
+        alert("La aceleracion del auto 1 es: " + a1.toFixed(2) + " [m/s^2], llega a la meta a " + velf1.toFixed(2)+ " [km/h] y tarda " + t1.toFixed(2) + " segundos. El precio del auto es de: $" + precio1.toFixed());
         }
         if(carroc1==1000){
         auto1 = new Image;
@@ -114,7 +115,8 @@ marco.src = "imagenes/marcoo.png";
         a2=(9.8*((motor2*7)/carroc2*0.8))*transmision2;
         t2= Math.sqrt((2*400)/a2);
         vf2=a2*t2;
-        alert( "La aceleracion del auto 2 es: "+a2.toFixed(2)+ "[m/s^2], llega a la meta a "+vf2.toFixed(2)+"[m/s] y tarda "+t2.toFixed(2)+" segundos. El precio del auto es de: $"+precio2.toFixed());
+        velf2=vf2*3.6;
+        alert( "La aceleracion del auto 2 es: "+a2.toFixed(2)+ " [m/s^2], llega a la meta a "+velf2.toFixed(2)+" [km/h] y tarda "+t2.toFixed(2)+" segundos. El precio del auto es de: $"+precio2.toFixed());
     }
 
     if(carroc2==1000){
