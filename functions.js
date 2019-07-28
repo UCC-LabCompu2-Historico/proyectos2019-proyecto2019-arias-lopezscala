@@ -28,8 +28,10 @@ pl2wins.src= "imagenes/pl2wins.png";
  * Funcion que calcula los valores de aceleracion, tiempo, precio y velocidad final del auto 1. Tambien selecciona
  * que el auto mostrado en pantalla coincide con la carroceria elegida. Alerta cuando superamos el precio limite.
  * @function calcula1
- * @param
- * @return
+ * @param carroc1
+ * @param motor1
+ * @param transmision1
+ * @return 
  */
     function calcula1(){
     var carroc1 = document.getElementById("carroceria1").value;
@@ -100,8 +102,10 @@ pl2wins.src= "imagenes/pl2wins.png";
  * Funcion que calcula los valores de aceleracion, tiempo, precio y velocidad final del auto 2. Tambien selecciona
  * que el auto mostrado en pantalla coincide con la carroceria elegida. Alerta cuando superamos el precio limite
  * @function calcula2
- * @param
- * @return
+ * @param carroc2
+ * @param motor2
+ * @param transmision2
+ * @return 
  */
     function calcula2(){
     var carroc2 = document.getElementById("carroceria2").value;
@@ -172,12 +176,13 @@ pl2wins.src= "imagenes/pl2wins.png";
  * Funcion que selecciona que funcion dibujadora del auto llama en base a su acelereacion, para que en el canvas
  * llegue primero el auto con mas aceleracion, o lleguen juntos en caso de empate
  * @function selecciona
- * @param
+ * @param a1{number}
+ * @param a2{number}
  * @return
  */
     function selecciona(){
 
-        if(a1>=a2){
+        if(a1>=a2){ 
             dibujaauto1();
             dibujaauto2();
 
