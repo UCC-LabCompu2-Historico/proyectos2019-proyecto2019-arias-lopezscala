@@ -277,7 +277,6 @@ pl2wins.src= "imagenes/pl2wins.png";
         ctx.drawImage(lineasup, 0, 100, 995, 15);
         ctx.drawImage(lineainf, 0, 370, 995, 15);
         ctx.drawImage(marco, 0, 0, 1000, 500);
-        window.setTimeout(pl1wins, 10000);
         if(a1>a2) ctx.drawImage(pl1wins, 250, 15, 500, 200);
         if(a1<a2) ctx.drawImage(pl2wins, 250, 10, 500, 200);
         }
