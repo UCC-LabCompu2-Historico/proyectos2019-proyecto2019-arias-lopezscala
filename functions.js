@@ -19,7 +19,10 @@ lineasup = new Image;
 lineasup.src = "imagenes/lineasup.jpg";
 marco = new Image;
 marco.src = "imagenes/marcoo.png";
-
+pl1wins= new Image;
+pl1wins.src= "imagenes/pl1wins.png";
+pl2wins= new Image;
+pl2wins.src= "imagenes/pl2wins.png";
 
 /**
  * Funcion que calcula los valores de aceleracion, tiempo, precio y velocidad final del auto 1. Tambien selecciona
@@ -256,6 +259,10 @@ marco.src = "imagenes/marcoo.png";
             posX2 += 3;
         }
 
+
+
+
+
 /**
  * Funcion que dibuja el cesped en el fondo
  * @function dibujafondo
@@ -270,8 +277,10 @@ marco.src = "imagenes/marcoo.png";
         ctx.drawImage(lineasup, 0, 100, 995, 15);
         ctx.drawImage(lineainf, 0, 370, 995, 15);
         ctx.drawImage(marco, 0, 0, 1000, 500);
+        window.setTimeout(pl1wins, 10000);
+        if(a1>a2) ctx.drawImage(pl1wins, 250, 15, 500, 200);
+        if(a1<a2) ctx.drawImage(pl2wins, 250, 10, 500, 200);
         }
-
 
     window.onload = function() {
         ctx = document.getElementById("canvas").getContext("2d");
