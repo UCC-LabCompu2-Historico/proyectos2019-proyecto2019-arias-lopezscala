@@ -50,6 +50,7 @@ pl2wins.src= "imagenes/pl2wins.png";
         precio1 = precioC1 + precioM1 + precioT1;
         if (precio1 > 18000) {
             alert("Recuerde que el valor total del auto no puede superar los $18000, seleccione componentes mas baratos");
+            location.reload();
         } else {
             a1 = (9.8 * ((motor1 * 7) / carroc1 * 0.8)) * transmision1;
             t1 = Math.sqrt((2 * 400) / a1);
@@ -130,6 +131,7 @@ pl2wins.src= "imagenes/pl2wins.png";
         precio2 = precioC2 + precioM2 + precioT2;
         if (precio2 > 18000) {
             alert("Recuerde que el valor total del auto no puede superar los $18000, seleccione componentes mas baratos");
+            location.reload();
         } else {
             a2 = (9.8 * ((motor2 * 7) / carroc2 * 0.8)) * transmision2;
             t2 = Math.sqrt((2 * 400) / a2);
